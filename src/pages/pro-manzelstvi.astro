@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  { name: "Outback víkendy", web: "https://www.outback-cesko.cz/" },
+  { name: "Motivační víkendy pro manželské páry", web: "www.radispolu.cz" },
+  { name: "Kristfest family", web: "https://www.kristfest-family.cz/" },
+  { name: "Konference rodin SCEAV", web: "https://kr.sceav.cz/" },
+  { name: "Kurz Začít znovu", web: "www.zacitznovu.cz" },
+  { name: "Kudykam po rozvodu", web: "www.casd.cz/kudykam-2022/" },
+  { name: "Projekt Mladé rodiny", web: "www.mladerodiny.cz" },
+  { name: "E-koučink NePornu.cz", web: "www.nepornu.cz" },
+  { name: "Národní týden manželství ", web: "www.tydenmanzelstvi.cz" },
+  { name: "Den pro rodinu a manželství", web: "www.alipro.cz" },
+  { name: "Mentoring manželský a předmanželský", web: "www.rfmarriage.cz" },
+  { name: "Manželské zastavení", web: "https://www.svobodavkristu.cz/" },
+  {
+    name: "Videokurz jedenplusjedna.online.cz",
+    web: "https://www.jedenplusjedna.online/",
+  },
+  { name: "Manželské večery", web: "www.manzelskevecery.cz" },
+  {
+    name: "Kurzy Vychova dětí a Výchova teenagerů",
+    web: "www.manzelskevecery.cz",
+  },
+  { name: "Evangelikální teologický seminář", web: "www.etspraha.cz" },
+  { name: "Mediace a rodinné konzultace", web: "www.prorodiny.cz" },
+  { name: "Kurz Příprava na manželství", web: "www.manzelskevecery.cz" },
+  {
+    name: "Společná příprava na život v manželství",
+    web: "https://pastorace.apha.cz/pro-rodinu/priprava-na-manzelstvi/",
+  },
+  { name: "Oddávání hledajících", web: "www.edenprozivot.cz" },
+  {
+    name: "Láska a jiné srandy",
+    web: "https://www.facebook.com/laskaajinesrandy",
+  },
+  { name: "Manželská setkání", web: "https://manzelskasetkani.cz/" },
+  { name: "Manželská setkání Familia", web: "www.familia.cz" },
+  { name: "Manželská setkání Pro rodiny", web: "www.prorodiny.cz" },
+  { name: "Manželská setkání Setkani.org", web: "www.setkani.org " },
+  { name: "Kána pro páry", web: "www.kana4you.cz" },
+];
+---
+
+<Layout title="Pro manželství">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Pro manželství</h1>
+      <p class="many_taital">
+        Projekty podporující MANŽELSTVÍ a VZTAHY stálé a celorepublikové
+        projekty
+      </p>
+      <Table items={items} />
+    </div>
+  </div>
+</Layout>

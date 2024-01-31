@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinný život Olomouc",
+    web: "https://rodinnyzivot.cz/pro-koho/zeny/",
+  },
+  {
+    oblast: "",
+    name: "Centrum pro rodinu Véna Olomouc z.s.",
+    web: "https://olomouc.dcpr.cz/programy/pro-zeny.html",
+  },
+  {
+    oblast: "Litoměřice",
+    name: "Diecézní centrum pro rodinu Biskupství litoměřického",
+    web: "https://www.centrumprorodinu.cz/proZeny.html",
+  },
+  {
+    oblast: "Hranice",
+    name: "Centrum pro rodinu Jitřenka (Hranice)",
+    web: "https://hranice.dcpr.cz/programy/pro-zeny.html , https://hranice.dcpr.cz/poradenstvi/poradenstvi-v-hranicich.html",
+  },
+  {
+    oblast: "Prostějov",
+    name: "Centrum pro rodinu Prostějov",
+    web: "https://www.prostejov.dcpr.cz/programy/pro-%C5%BEeny.html",
+  },
+  {
+    oblast: "Šternberk",
+    name: "Centrum pro rodinu Šternberk",
+    web: "https://sternberk.dcpr.cz/programy/pro-zeny.html",
+  },
+  {
+    oblast: "Šumperk",
+    name: "Centrum pro rodinu Šumperk",
+    web: "https://sumperk.dcpr.cz/programy/pro-zeny.html",
+  },
+  {
+    oblast: "Uherský Brod",
+    name: "Centrum pro rodinu Uherský Brod",
+    web: "https://www.uhersky-brod.dcpr.cz/programy/pro-zeny.html",
+  },
+  {
+    oblast: "Valašské Meziříčí ",
+    name: "Centrum pro rodinu Valašské Meziříčí z. s.",
+    web: "https://www.valmez.dcpr.cz/programy/pro-zeny.html",
+  },
+  {
+    oblast: "Veselí nad Moravou",
+    name: "",
+    web: "https://www.veseli-nad-moravou.dcpr.cz/programy/pro-d%C3%ADvky-a-%C5%BEeny.html",
+  },
+];
+---
+
+<Layout title="Pro ženy">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Pro ženy</h1>
+      <p class="many_taital">
+        <Table items={items} />
+      </p>
+    </div>
+  </div>
+</Layout>

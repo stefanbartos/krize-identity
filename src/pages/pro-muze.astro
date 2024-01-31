@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  { name: "Chlapi.cz	", web: "https://www.chlapi.cz/" },
+  { name: "Cesta srdce muže ", web: "https://cestasrdcemuze.cz/" },
+  {
+    oblast: "Litoměřice",
+    name: "Diecézní centrum pro rodinu Biskupství litoměřického",
+    web: "https://www.centrumprorodinu.cz/ProMuze.html",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinný život Olomouc",
+    web: "https://rodinnyzivot.cz/pro-koho/muzi/",
+  },
+  {
+    oblast: "",
+    name: "Centrum pro rodinu Véna Olomouc z.s.",
+    web: "https://olomouc.dcpr.cz/programy/pro-muze.html",
+  },
+  {
+    oblast: "Hranice",
+    name: "Centrum pro rodinu Jitřenka ",
+    web: "https://hranice.dcpr.cz/programy/pro-muze.html",
+  },
+  {
+    oblast: "Prostějov",
+    name: "Centrum pro rodinu Prostějov",
+    web: "https://www.prostejov.dcpr.cz/programy/pro-mu%C5%BEe.html",
+  },
+  {
+    oblast: "Šternberk",
+    name: "Centrum pro rodinu Šternberk",
+    web: "https://sternberk.dcpr.cz/programy/pro-muze.html",
+  },
+  {
+    oblast: "Valašské Meziříčí ",
+    name: "Centrum pro rodinu Valašské Meziříčí z. s.",
+    web: "https://www.valmez.dcpr.cz/programy/pro-muze.html",
+  },
+  {
+    oblast: "Veselí nad Moravou",
+    name: "Centrum pro rodinu Veselí nad Moravou",
+    web: "https://www.veseli-nad-moravou.dcpr.cz/programy/pro-mu%C5%BEe.html",
+  },
+];
+---
+
+<Layout title="Pro muže">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Pro muže</h1>
+      <p class="many_taital">
+        <Table items={items} />
+      </p>
+    </div>
+  </div>
+</Layout>

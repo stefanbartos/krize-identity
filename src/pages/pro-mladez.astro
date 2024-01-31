@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  {
+    oblast: "České Budějovice",
+    name: "Diecézní centrum pro mládež",
+    web: "https://prolidi.bcb.cz/cs/diecezni-centrum-pro-mladez",
+  },
+  {
+    oblast: "Ktiš",
+    name: "Dům života mládeže",
+    web: "https://prolidi.bcb.cz/cs/dczm-ktis-ml%C3%A1de%C5%BE",
+  },
+  {
+    oblast: "Plzeň",
+    name: "Diecézní centrum pro mládež",
+    web: "www.dcmplzen.cz",
+  },
+  {
+    oblast: "Litoměřice",
+    name: "Diecézní centrum pro mládež",
+    web: "https://www.dcml.cz/",
+  },
+  {
+    oblast: "Příchovice",
+    name: "Dům života mládeže Křižovatka",
+    web: "https://krizovatka-prichovice.cz/",
+  },
+  {
+    oblast: "Hradec Králové",
+    name: "Diecézní centrum pro mládež",
+    web: "https://www.bihk.cz/biskupstvi/diecezni-centrum-pro-mladez",
+  },
+  {
+    oblast: "Deštné v Orlických horách",
+    name: "Dům života mládeže Vesmír",
+    web: "http://vesmir.signaly.cz/",
+  },
+  {
+    oblast: "Praha",
+    name: "Diecézní centrum pro mládež",
+    web: "https://adcm.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Diecézní centrum pro mládež",
+    web: "https://mladez.ado.cz/",
+  },
+  {
+    oblast: "Rajnochovice",
+    name: "Dům života mládeže Přístav ",
+    web: "https://pristav.ado.cz/",
+  },
+  {
+    oblast: "Rajnochovice",
+    name: "Táborové středisko Archa ",
+    web: "https://archa.ado.cz/",
+  },
+  {
+    oblast: "Brno",
+    name: "Diecézní centrum pro mládež",
+    web: "https://mladez.biskupstvi.cz/dcm/",
+  },
+  {
+    oblast: "Osová Bítýška",
+    name: "Dům života mládeže Mamre",
+    web: "https://mladez.biskupstvi.cz/mamre/",
+  },
+  {
+    oblast: "Ostrava",
+    name: "Diecézní centrum pro mládež",
+    web: "https://dcm.doo.cz/",
+  },
+];
+---
+
+<Layout title="Pro muze">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Pro mládež</h1>
+
+      <p class="many_taital">
+        DIECÉZNÍ CENTRA MLÁDEŽE připravují formační programy pro mládež
+      </p>
+      <p class="many_taital">
+        DOMY ŽIVOTA MLÁDEŽE jsou místa, kam může mladý člověk přijet a potkat
+        další mladé lidi ze své diecéze (kraje). Přijetí vytváří tým mladých
+        lidí s knězem žijících nebo působících na centru. Tyto týmy se zaměřují
+        na formaci mladých a organizují tematické akce.
+      </p>
+      <Table items={items} />
+    </div>
+  </div>
+</Layout>

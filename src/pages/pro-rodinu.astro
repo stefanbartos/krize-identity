@@ -1,0 +1,202 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  {
+    oblast: "Praha",
+    name: "Centrum pro rodinu při Arcibiskupství pražském",
+    web: "https://pastorace.apha.cz/pro-rodinu/",
+  },
+  {
+    oblast: "Praha",
+    name: "Občanské sdružení Rodinné centrum Praha",
+    web: "https://www.rodinnecentrum.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinný život Olomouc",
+    web: "https://rodinnyzivot.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Véna Olomouc z.s.",
+    web: "https://olomouc.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu, Holešov",
+    web: "https://www.cprholesov.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Jitřenka (Hranice)",
+    web: "https://hranice.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Kána (Konice)",
+    web: "https://www.konice.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Děkanátní centrum pro rodinu Kroměříž",
+    web: "https://www.cpr-kromeriz.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Kyjov",
+    web: "https://www.kyjov.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Rodinné a mateřské centrum Sluníčko, Moravská Třebová",
+    web: "https://slunickomtrebova.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Ráj z. s. (Pavlovice u Přerova)",
+    web: "https://www.raj-pavlovice.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Prostějov",
+    web: "https://www.prostejov.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Rodinné centrum Strážnice z. s.",
+    web: "https://www.straznice.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Šternberk",
+    web: "https://sternberk.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Šumperk",
+    web: "https://sumperk.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Uherský Brod",
+    web: "https://www.uhersky-brod.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu UH děkanátu (Uherské Hradiště)",
+    web: "https://www.uherske-hradiste.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Děkanátní středisko Centrum pro rodinu (Valašské Klobouky)",
+    web: "https://valasske-klobouky.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Valašské Meziříčí z. s.",
+    web: "https://www.valmez.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Veselí nad Moravou",
+    web: "https://www.veseli-nad-moravou.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu (Vizovice)",
+    web: "https://www.vizovice.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Spolu (Vsetín)",
+    web: "https://www.cprs.cz/#!/page_SPLASH",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Vyškov, z. s.",
+    web: "https://www.vyskov.dcpr.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Mateřské a rodinné centrum Zábřeh, o. s.",
+    web: "http://www.hnizdozabreh.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Centrum pro rodinu Zlín, z.s.",
+    web: "https://www.cpr-zlin.cz/",
+  },
+  {
+    oblast: "Brno",
+    name: "Centrum pro rodinu a sociální péči Hodonín",
+    web: "https://cprhodonin.cz/",
+  },
+  {
+    oblast: "Brno",
+    name: "Rodinné centrum Blansko",
+    web: "http://www.rcblansko.cz/",
+  },
+  {
+    oblast: "Brno",
+    name: "Centrum pro rodinu Vysočina z. s. (Jihlava)",
+    web: "https://www.centrumrodin.cz/",
+  },
+  {
+    oblast: "České Budějovice",
+    name: "Diecézní centrum pro rodinu České Budějovice",
+    web: "https://prolidi.bcb.cz/cs/diecezni-centrum-pro-rodinu",
+  },
+  {
+    oblast: "Hradec Králové",
+    name: "Centrum pro rodinu Hradec Králové",
+    web: "https://www.bihk.cz/biskupstvi/centrum-pro-rodinu",
+  },
+  {
+    oblast: "Litoměřice",
+    name: "Diecézní centrum pro rodinu Biskupství litoměřického",
+    web: "https://www.centrumprorodinu.cz/",
+  },
+  {
+    oblast: "Litoměřice",
+    name: "Centrum pro rodinu  (Krupka)",
+    web: "https://www.centrumprorodinu.cz/",
+  },
+  {
+    oblast: "Litoměřice",
+    name: "Centrum pro náhradní a rodinnou péči, o. p. s. (Terezín)",
+    web: "https://www.cpnrp.cz/",
+  },
+  {
+    oblast: "Ostrava",
+    name: "Centrum pro rodinu a sociální péči Ostrava",
+    web: "https://www.prorodiny.cz/",
+  },
+  {
+    oblast: "Plzeň",
+    name: "Centrum pro rodinu Plzeň",
+    web: "https://www.bip.cz/cs/centrum-pro-rodinu",
+  },
+  {
+    oblast: "Plzeň",
+    name: "Rodinné centrum Plzeň občanské sdružení",
+    web: "http://web.quick.cz/rocep/",
+  },
+];
+---
+
+<Layout title="Centra pro rodinu">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Centra pro rodinu</h1>
+      <p class="many_taital">
+        Centra pro RODINU nabízí různé, většinou jednorázové programy během roku
+        pro všechny již zmíněné skupiny.
+      </p>
+      <p class="many_taital">
+        <Table items={items} />
+      </p>
+    </div>
+  </div>
+</Layout>
