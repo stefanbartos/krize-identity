@@ -1,15 +1,50 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const pomoc = [
+  { name: "Otcovo srdce", web: "https://otcovosrdce.cz/" },
+  { name: "Ne Pornu", web: "www.nepornu.cz" },
+  { name: "Druhý krok", web: "https://druhykrok.cz/" },
+  { name: "Hledám Boha", web: "https://hledamboha.cz/" },
+];
+
+const zneuzivanie = [
+  {
+    name: "Kontaktní místo pro ochranu nezletilých a zranitelných ČBK",
+    web: "https://www.ochrananezletilych.cz/",
+  },
+  { name: "Někdo ti uvěří", web: "https://www.nekdotiuveri.cz/" },
+  {
+    name: "Centrum pro rodinu Hradec Králové",
+    web: "https://www.bihk.cz/kontakty",
+  },
+];
 ---
 
 <Layout title="Pomoc">
   <div class="services_section layout_padding">
     <div class="container">
-      <h1 class="services_taital">Pomoc</h1>
-
-      <p class="many_taital" style="font-style: italic; padding-top: 2rem">
-        Téma Identita bude doplněno po konferenci.
+      <h1 class="services_taital">PORADNA - PSYCHOLOG - UZDRAVENÍ IDENTITY</h1>
+      <h2 class="many_taital">UZDRAVENÍ IDENTITY</h2>
+      <p class="many_taital">
+        Pokud se váš život neodvíjel zrovna ideálně, není vše ztraceno. Níže
+        nabízíme programy, které vám mohou pomoci k důležité životní změně.
+        Nebude to bez úsilí, ale bude to stát za to.
       </p>
+      <Table items={pomoc} showOblast={false} />
+
+      <h2 class="many_taital">
+        <a
+          href="/poradny"
+          style="text-decoration: underline !important; color: #0056b3 !important"
+          >PORADNA</a
+        >
+      </h2>
+
+      <p class="many_taital">PSYCHOLOG - Seznam psychologů se připravuje</p>
+      <p class="many_taital">KONTAKT PRO ZNEUŽÍVANÉ DUCHOVNÍM</p>
+      <Table items={zneuzivanie} showOblast={false} />
     </div>
   </div>
 </Layout>

@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  { name: "Národní centrum pro rodinu", web: "https://www.rodiny.cz/" },
+  { name: "Křesťanské terapeutické centrum", web: "https://ktcentrum.cz/" },
+  {
+    name: "Diakonie Českobratrské církve evangelické",
+    web: "https://www.diakonie.cz/",
+  },
+  { name: "Maltézká pomoc", web: "https://maltezskapomoc.cz/" },
+  { name: "Charita ČR", web: "https://www.charita.cz/" },
+  {
+    name: "Asociace pro dialog křesťanství a psychologie",
+    web: "https://www.adkp.cz/",
+  },
+];
+---
+
+<Layout title="O webu">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">O webu</h1>
+      <p class="many_taital">
+        Web je pomocníkem pro lidi hledající informace, formaci nebo pomoc v
+        oblasti identity. Nabízí linky na již existující projekty a organizace.
+        Ty jsou na sobě nezávislé, web je jen jejich rozcestníkem, nikoli
+        autorem. Každá organizace vystupuje sama za sebe.
+      </p>
+
+      <p class="many_taital mb-5">
+        Web vznikl při příležitosti konference Krize identity, která se konala
+        2. a 3. února 2024 v Brně.
+      </p>
+
+      <p>
+        Zastřešující organizace působící po celé České republice, které
+        poskytují formace a pomoc uvedenou na našem webu:
+      </p>
+      <Table items={items} showOblast={false} />
+
+      <p>
+        Web pro vás připravili lidé, kteří se podílí na projektu Služba křesťanů
+        společnosti / 7vrchů.
+      </p>
+      <p>
+        <a
+          href="/poradny"
+          target="_blank"
+          style="text-decoration: underline !important; color: #0056b3 !important"
+          >https://www.7vrchu.cz/</a
+        >
+      </p>
+
+      <p>
+        <a
+          href="/poradny"
+          target="_blank"
+          style="text-decoration: underline !important; color: #0056b3 !important"
+          >https://www.credonf.cz/</a
+        >
+      </p>
+    </div>
+  </div>
+</Layout>

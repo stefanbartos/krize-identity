@@ -1,15 +1,16 @@
 ---
 interface Props {
   items: Array<{ name: string; web: string; oblast?: string }>;
+  showOblast?: boolean;
 }
 
-const { items } = Astro.props;
+const { items, showOblast = true } = Astro.props;
 ---
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">Oblast</th>
+      {showOblast && <th scope="col">Oblast</th>}
       <th scope="col">Web</th>
     </tr>
   </thead>
@@ -17,7 +18,7 @@ const { items } = Astro.props;
     {
       items.map(({ oblast, name, web }, i) => (
         <tr>
-          <td>{oblast ?? ""}</td>
+          {showOblast && <td>{oblast ?? ""}</td>}
           <td>
             <a
               href={web}

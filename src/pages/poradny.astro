@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Table from "../components/Table.astro";
+
+const items = [
+  {
+    oblast: "Hradec Králové",
+    name: "Ladislav a Věra Traxlerovi",
+    web: "https://www.bihk.cz/biskupstvi/centrum-pro-rodinu/pomoc-rodinam",
+  },
+  {
+    oblast: "Plzeň ",
+    name: " Marie Kutilová",
+    web: "https://www.bip.cz/cs/centrum-pro-rodinu,  http://www.poradnaukaplicky.cz/",
+  },
+  {
+    oblast: "Nymburk",
+    name: "Křesťanská psychologická poradna ",
+    web: "https://jancapek.webnode.cz/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Manželská mediace",
+    web: "https://manzelskamediace.cz/",
+  },
+  {
+    oblast: "Brno",
+    name: " Manželská a rodinná poradna Bethesda",
+    web: "https://css.brno.cz",
+  },
+  {
+    oblast: "Vyškov",
+    name: " Poradna pro rodinu, manželství a mezilidské vztahy",
+    web: "https://psychologievyskov.cz/",
+  },
+  {
+    oblast: "Praha",
+    name: " Rodinné centrum Praha",
+    web: "https://www.rodinnecentrum.cz/poradenstvi",
+  },
+  {
+    oblast: "Praha",
+    name: " Křesťanská psychologická poradna",
+    web: "https://pastorace.apha.cz/pro-rodinu/krestanska-psychologicka-poradna/",
+  },
+  {
+    oblast: "Plzeň",
+    name: "Křesťanská pedagogicko-psychologická poradna Plzeň",
+    web: "https://kppp-plzen.cz/kontakt/",
+  },
+  {
+    oblast: "Praha",
+    name: "Křesťanská pedagogicko-psychologická poradna Praha",
+    web: "https://www.kppp.cz/",
+  },
+  {
+    oblast: "",
+    name: "SOS centrum Diakonie ČCE",
+    web: "https://www.soscentrum.cz/",
+  },
+  {
+    oblast: "Praha",
+    name: "Poradna Magdala",
+    web: "https://praha.charita.cz/sluzby/magdala/",
+  },
+  {
+    oblast: "Valašské Meziříčí",
+    name: "Služba lidem LGBTQ+",
+    web: "https://www.valmez.dcpr.cz/poradenstv%C3%AD.html",
+  },
+  {
+    oblast: "",
+    name: "Poradna pro ženy",
+    web: "https://www.poradnaprozeny.eu/",
+  },
+  {
+    oblast: "",
+    name: "AQUA VITAE – Poradna pro ženy v tísni",
+    web: "https://hnutiprozivot.cz/linka-pomoci",
+  },
+  {
+    oblast: "Plzeň",
+    name: "Poradna pro ženy a dívky - Plzeň",
+    web: "https://www.poradnaprozeny.eu/plzen/",
+  },
+  {
+    oblast: "Praha",
+    name: "Poradna pro ženy - Praha",
+    web: "https://www.poradnaprozeny.eu/praha/",
+  },
+  {
+    oblast: "Olomouc",
+    name: "Poradna pro ženy a dívky - Olomouc",
+    web: "https://www.poradnaprozeny.eu/frydek-mistek/",
+  },
+  {
+    oblast: "Frýdek-Místek",
+    name: "Poradna pro ženy a dívky - Frýdek-Místek",
+    web: "https://www.poradnaprozeny.eu/olomouc/",
+  },
+  {
+    oblast: "Rožnov",
+    name: "Poradna pro ženy a dívky - Rožnov",
+    web: "https://www.poradnaprozeny.eu/roznov/",
+  },
+  {
+    oblast: "Praha",
+    name: "Poradna pro ženy a dívky - Praha",
+    web: "https://pastorace.apha.cz/pro-rodinu/poradenstvi/pro-zeny-a-divky/",
+  },
+  {
+    oblast: "Veselí nad Moravou",
+    name: "Poradna pro ženy a dívky při CPR Veselí",
+    web: "www.ppzd.estranky.cz",
+  },
+  {
+    oblast: "Třinec",
+    name: "Poradna pro ženy Třinec",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+  {
+    oblast: "Ústí nad Labem",
+    name: "Poradna pro ženy Ústí nad Labem",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+  {
+    oblast: "Zábřeh na Moravě",
+    name: "Poradna pro ženy Zábřeh na Moravě",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+  {
+    oblast: "Zlín",
+    name: "Poradna pro ženy Zlín",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+  {
+    oblast: "Opava",
+    name: "Poradna pro ženy Opava",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+  {
+    oblast: "České Budějovice",
+    name: "Poradna pro ženy České Budějovice",
+    web: "https://ppzd.estranky.cz/clanky/poradny-pro-zeny-a-divky-cr.html",
+  },
+];
+---
+
+<Layout title="Pro muze">
+  <div class="services_section layout_padding">
+    <div class="container">
+      <h1 class="services_taital">Poradna</h1>
+      <Table items={items} />
+    </div>
+  </div>
+</Layout>
