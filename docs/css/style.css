@@ -227,7 +227,6 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/header-bg.png);
     height: auto;
     background-size: 100%;
 }
