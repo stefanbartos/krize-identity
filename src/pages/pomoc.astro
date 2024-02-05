@@ -3,10 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Table from "../components/Table.astro";
 
 const pomoc = [
-  { name: "Otcovo srdce", web: "https://otcovosrdce.cz/" },
-  { name: "Ne Pornu", web: "www.nepornu.cz" },
-  { name: "Druhý krok", web: "https://druhykrok.cz/" },
-  { name: "Hledám Boha", web: "https://hledamboha.cz/" },
+  {
+    name: "Otcovo srdce",
+    web: "https://otcovosrdce.cz/",
+    details: "Najděte svou identitu a hodnotu",
+  },
+  {
+    name: "Ne Pornu",
+    web: "https://www.nepornu.cz",
+    details: "Vyjděte ze závislosti",
+  },
+  {
+    name: "Druhý krok",
+    web: "https://druhykrok.cz/",
+    details: "Změna je proces. Nebuďte na to sami.",
+  },
+  {
+    name: "Hledám Boha",
+    web: "https://hledamboha.cz/",
+    details: "Kurzy pro hledání smyslu života",
+  },
 ];
 
 const zneuzivanie = [
@@ -32,7 +48,7 @@ const zneuzivanie = [
         nabízíme programy, které vám mohou pomoci k důležité životní změně.
         Nebude to bez úsilí, ale bude to stát za to.
       </p>
-      <Table items={pomoc} showOblast={false} />
+      <Table items={pomoc} showOblast={false} showDetails />
 
       <h2 class="many_taital">
         <a
